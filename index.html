@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ⛅ What's the weather like?</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <form class="input" id="inputForm">
+            <input class="input__value" type="text" id="inputValue" placeholder="City, for e.g. 'Germany' " required>
+            <input class="input__button" type="submit" value="Submit" id="submitButton">
+        </form>
+        <div class="display" id="displayBox">
+            <img class="display__icon" src="http://openweathermap.org/img/wn/10d@4x.png" alt="" srcset="">
+            <h2 class="display__city" id="city"></h2>
+            <h3 class="display__temp" id="temp"></h3>
+            <p class="display__desc" id="desc"></p>
+        </div>
+    </div>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
