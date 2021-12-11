@@ -4,10 +4,11 @@ const city = document.getElementById('city');
 const temp = document.getElementById('temp');
 const desc = document.getElementById('desc');
 const displayBox = document.getElementById('displayBox');
+const API_WHEATHER_URL = 'https://api.openweathermap.org/data/2.5/weather'
 
 inputForm.addEventListener('submit', e => {
     e.preventDefault();
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inputValue.value}&appid=${API}&units=imperial`)
+    fetch(`${API_WHEATHER_URL}?q=${inputValue.value}&appid=${API}&units=imperial`)
         .then(response => response.json())
         .then(data => {display(data); console.log(data)})
         .catch(err => {
@@ -44,7 +45,7 @@ window.onload = e => {
     navigator.geolocation.getCurrentPosition((position)=>{
         let latitud = position.coords.latitude.toFixed(2);
         let longitud = position.coords.longitude.toFixed(2);
-        fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitud}&lon=${longitud}&appid=${API}&units=imperial`)
+        fetch(`${API_WHEATHER_URL}?lat=${latitud}&lon=${longitud}&appid=${API}&units=imperial`)
             .then(response => response.json())
             .then(data => display(data));
     })
