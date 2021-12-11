@@ -7,7 +7,7 @@ const displayBox = document.getElementById('displayBox');
 
 inputForm.addEventListener('submit', e => {
     e.preventDefault();
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${inputValue.value}&appid=${API}&units=imperial`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inputValue.value}&appid=${API}&units=imperial`)
         .then(response => response.json())
         .then(data => {display(data); console.log(data)})
         .catch(err => {
