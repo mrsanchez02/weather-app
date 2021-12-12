@@ -25,7 +25,7 @@ const display = (data) => {
     const cityDesc = data.weather[0].description;
 
     displayBox.innerHTML =`
-    <img class="display__icon" src="http://openweathermap.org/img/wn/${weatherIcon}@4x.png" alt="" srcset="">
+    <img class="display__icon" src="https://openweathermap.org/img/wn/${weatherIcon}@4x.png" alt="" srcset="">
     <h2 class="display__city" id="city">
         <i class="fas fa-map-marker-alt"></i> 
         ${cityName}
